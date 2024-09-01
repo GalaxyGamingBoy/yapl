@@ -1,1 +1,1 @@
-pub mod password_auth;
+pub mod admins;

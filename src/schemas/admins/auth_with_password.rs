@@ -11,18 +11,18 @@ pub struct AuthWithPassword {
 #[derive(Debug)]
 #[allow(dead_code)]
 pub enum AuthWithPasswordErrors {
-    BadRequest(AuthWithPassword400)
+    ValidationError(AuthWithPassword400)
 }
 
 #[derive(Serialize, Deserialize, Debug)]
-pub(crate) struct AuthWithPassword400 {
+pub struct AuthWithPassword400 {
     pub code: i32,
     pub message: String,
     pub data: AuthWithPassword400Data
 }
 
 #[derive(Serialize, Deserialize, Debug)]
-struct AuthWithPassword400Data {
+pub struct AuthWithPassword400Data {
     pub identity: Option<ApiFieldError>,
     pub password: Option<ApiFieldError>
 }

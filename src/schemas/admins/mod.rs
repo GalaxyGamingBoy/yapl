@@ -1,5 +1,6 @@
 pub mod auth_with_password;
 pub mod auth_refresh;
+pub mod request_password_reset;
 
 use chrono::{DateTime, Utc};
 use serde::{Deserialize, Serialize};

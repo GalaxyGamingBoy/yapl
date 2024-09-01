@@ -2,7 +2,7 @@ use std::rc::Rc;
 use reqwest::{Client, Proxy};
 use reqwest::header::HeaderMap;
 use crate::apis::admins::Admins;
-use crate::data::password_auth::PasswordAuth;
+use crate::data::admins::password_auth::PasswordAuth;
 use crate::schemas::admins::auth_with_password::AuthWithPasswordErrors;
 
 pub struct Pocketbase {
